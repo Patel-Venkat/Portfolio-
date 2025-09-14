@@ -611,147 +611,95 @@ button:hover, .btn-explore:hover, .view-btn:hover, .back-btn:hover {
 
 
 /* ---------- RESPONSIVE ---------- */
-@media (max-width: 1024px) {
-  .cards-grid, .choose-us-grid, .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 768px) {
-  .main { margin-left: 0; width: 100%; padding: 1rem; }
-  .sidebar {
-    position: relative;
-    width: 100%;
-    height: auto;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 1rem;
-  }
-  .sidebar img { width: 70px; height: 70px; }
-  .cards-grid, .choose-us-grid, .projects-grid { grid-template-columns: 1fr; }
-  .navbar { display: none; flex-direction: column; background: #111; padding: 10px; border-radius: 10px; }
-  .navbar.open { display: flex; }
-  .menu-toggle { display: block; }
-}
-
-/* ---------- RESPONSIVENESS ---------- */
+ 
+ 
 
 /* Tablets (≤1024px) */
 @media (max-width: 1024px) {
-  .layout {
-    grid-template-columns: 220px 1fr; /* shrink sidebar */
-  }
-
-  .sidebar img {
-    width: 120px;
-    height: 120px;
-  }
-
-  .navbar a {
-    font-size: 0.95rem;
-    padding: 10px;
-  }
-
-  .gallery-cards,
-  .projects-grid {
+  .main { margin-left: 220px; }
+  .sidebar { width: 220px; }
+  .gallery-cards, .projects-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+.menu-toggle {
+  display: none;
+}
+
 
 /* Mobiles (≤768px) */
 @media (max-width: 768px) {
-  .layout {
-    grid-template-columns: 1fr;
+  .main {
+    margin-left: 0;
+    padding: 1rem;
+    margin-top: 70px; /* space for top bar */
   }
 
-  /* Sidebar collapses into top bar */
+  /* Sidebar → hidden by default */
   .sidebar {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: auto;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    z-index: 1000;
+    width: 220px;
+    height: 100%;
+    background: #2e2a27;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2rem 1.5rem;
+    z-index: 1100;
   }
 
-  .sidebar img {
-    width: 60px;
-    height: 60px;
+  /* Sidebar active (when toggled) */
+  .sidebar.active {
+    transform: translateX(0);
   }
 
+  /* Hide name/role on mobile */
   .sidebar h2, .sidebar .role {
-    display: none; /* hide large texts for mobile */
+    display: none;
   }
 
-  /* Mobile menu toggle */
+  /* Toggle button */
   .menu-toggle {
     display: block;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1200;
     background: #4b3621; /* theme brown */
-    color: #fdf6e3; /* light beige */
+    color: #f8eee0;      /* light beige */
     border: none;
-    font-size: 1.5rem;
-    padding: 6px 12px;
+    padding: 8px 12px;
+    font-size: 1.4rem;
     border-radius: 8px;
     cursor: pointer;
   }
 
-  /* Navbar hidden by default */
+  /* Navbar inside sidebar (vertical) */
   .navbar {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    flex-direction: column;
-    background: #e6d3b3; /* light beige background */
-    display: none;
-    padding: 10px 0;
-  }
-
-  .navbar.open {
     display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
   }
-
   .navbar a {
-    text-align: center;
-    padding: 12px;
+    text-align: left;
+    padding: 10px 0;
     border-bottom: 1px solid #d1b792;
   }
 
-  .main {
-    margin-top: 80px; /* push content below fixed header */
-  }
-
-  /* Gallery/Projects → single column */
-  .gallery-cards,
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .collection-grid {
+  /* Single column for grids */
+  .gallery-cards, .projects-grid, .collection-grid {
     grid-template-columns: 1fr;
   }
 }
 
 /* Small phones (≤480px) */
 @media (max-width: 480px) {
-  .sidebar img {
-    width: 50px;
-    height: 50px;
-  }
-
-  .btn-explore, .view-btn {
-    font-size: 0.9rem;
-    padding: 8px 14px;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
+  .sidebar { width: 200px; }
+  .sidebar img { width: 50px; height: 50px; }
+  .btn-explore, .view-btn { font-size: 0.9rem; padding: 8px 14px; }
+  h2 { font-size: 1.5rem; }
 }
-/* Hide menu toggle on larger screens */
-.menu-toggle {
-  display: none;
-} 

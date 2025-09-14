@@ -90,15 +90,15 @@ function goBackToProjects() {
 
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-// Mobile menu toggle
 const menuToggle = document.querySelector(".menu-toggle");
-const navbar = document.querySelector(".navbar");
+const sidebar = document.querySelector(".sidebar");
 
 if (menuToggle) {
   menuToggle.addEventListener("click", () => {
-    navbar.classList.toggle("open");
+    sidebar.classList.toggle("active");
   });
 }
+
 
 // Close menu when a link is clicked (mobile UX improvement)
 document.querySelectorAll(".navbar a").forEach(link => {
