@@ -633,3 +633,125 @@ button:hover, .btn-explore:hover, .view-btn:hover, .back-btn:hover {
   .menu-toggle { display: block; }
 }
 
+/* ---------- RESPONSIVENESS ---------- */
+
+/* Tablets (≤1024px) */
+@media (max-width: 1024px) {
+  .layout {
+    grid-template-columns: 220px 1fr; /* shrink sidebar */
+  }
+
+  .sidebar img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .navbar a {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .gallery-cards,
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobiles (≤768px) */
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  /* Sidebar collapses into top bar */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
+  }
+
+  .sidebar img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .sidebar h2, .sidebar .role {
+    display: none; /* hide large texts for mobile */
+  }
+
+  /* Mobile menu toggle */
+  .menu-toggle {
+    display: block;
+    background: #4b3621; /* theme brown */
+    color: #fdf6e3; /* light beige */
+    border: none;
+    font-size: 1.5rem;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  /* Navbar hidden by default */
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: #e6d3b3; /* light beige background */
+    display: none;
+    padding: 10px 0;
+  }
+
+  .navbar.open {
+    display: flex;
+  }
+
+  .navbar a {
+    text-align: center;
+    padding: 12px;
+    border-bottom: 1px solid #d1b792;
+  }
+
+  .main {
+    margin-top: 80px; /* push content below fixed header */
+  }
+
+  /* Gallery/Projects → single column */
+  .gallery-cards,
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .collection-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Small phones (≤480px) */
+@media (max-width: 480px) {
+  .sidebar img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .btn-explore, .view-btn {
+    font-size: 0.9rem;
+    padding: 8px 14px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+/* Hide menu toggle on larger screens */
+.menu-toggle {
+  display: none;
+} 
