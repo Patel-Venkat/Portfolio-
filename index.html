@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manve Studios</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <img src="assets/profile.jpg" alt="Patel Venkat">
+    <h2 >Patel Venkat</h2>
+    <p class="role">Photographer</p>
+    <div class="contact-links">
+      <a href="mailto:patelvenkat@gmail.com"><i class="fas fa-envelope"></i> patelvenkat@gmail.com</a>
+      <a href="https://www.instagram.com/patelvenkat._.13" target="_blank"><i class="fab fa-instagram"></i> @patel_venkat</a>
+      <a href="https://www.instagram.com/manve.studios" target="_blank"><i class="fab fa-instagram"></i> @manve.studios</a>
+      <a href="https://in.linkedin.com/in/patel-venkat-4b81a8270" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <div class="main">
+    <!-- HEADER -->
+    <header class="header">
+      <nav class="navbar">
+        <a href="#" data-page="about" class="active">About</a>
+        <a href="#" data-page="projects">MANVE.studios</a>
+        <a href="#" data-page="gallery">Gallery</a>
+        <a href="#" data-page="contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="page-section active ">
+      <div class="about-content">
+        <h2>Hi, I’m <span class="highlight-name">Patel Venkat</span></h2>
+        <p class="tagline">Photographer • Designer • Visual Storyteller</p>
+
+        <div class="about-text">
+          <p>I capture emotions and moments, turning them into timeless stories through my lens. For me, photography isn’t just about pictures — it’s about preserving feelings.</p>
+          <p>Through <strong>Manve Studios</strong>, I’ve had the privilege of working on wedding monograms, custom frames, baby castings, and invitations — each crafted with passion and precision.</p>
+          <p>Every project I take on is more than a job — it’s a way to connect, create, and inspire.</p>
+        </div>
+
+        <!-- Highlights -->
+        <div class="about-highlights">
+          <div class="highlight"><i class="fas fa-camera"></i> 7+ Years Experience</div>
+          <div class="highlight"><i class="fas fa-paint-brush"></i> 200+ Projects Completed</div>
+          <div class="highlight"><i class="fas fa-users"></i> 50+ Clients Worldwide</div>
+          <div class="highlight"><i class="fas fa-award"></i> 3 Photography Exhibitions</div>
+        </div>
+
+        <!-- Signature -->
+        <p class="signature">— Crafted with passion, Patel Venkat</p>
+
+        <!-- Call-to-Action -->
+        <a href="#" data-page="projects" class="btn-explore">Explore My Work →</a>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+   <!-- MANVE STUDIOS SECTION -->
+<section id="projects" class="page-section">
+  
+  <!-- About Manve Studios -->
+  <div class="studio-intro">
+    <h2>About <span class="highlight-name">Manve Studios</span></h2>
+    <p>
+      At <strong>Manve Studios</strong>, we transform moments into timeless visuals. 
+      From elegant frames to modern design solutions, our passion lies in creating art 
+      that tells your story with creativity and precision. 
+      Every creation is more than just design — it’s a memory preserved forever.
+    </p>
+  </div>
+  <!-- Our Expertise -->
+<div class="our-expertise">
+  <h2>Our Expertise</h2>
+  <p class="expertise-intro">
+    Explore the diverse range of projects crafted at <strong>Manve Studios</strong>, 
+    where each creation is designed with care, precision, and passion.
+  </p>
+
+  <div class="gallery-cards">
+    <!-- Custom Frames -->
+    <div class="gallery-card">
+      <img src="assets/frame1.jpg" alt="Custom Frames">
+      <div class="gallery-card-content">
+        <h3>Custom Frames</h3>
+        <p>Handcrafted frames to preserve your cherished memories in timeless style.</p>
+        <button class="view-btn" onclick="openCollection('frames')">View Collection</button>
+      </div>
+    </div>
+
+    <!-- Wedding Monograms -->
+    <div class="gallery-card">
+      <img src="assets/wedding_logo.jpg" alt="Wedding Monograms">
+      <div class="gallery-card-content">
+        <h3>Wedding Monograms</h3>
+        <p>Elegant and personalized monograms, crafted to make weddings unforgettable.</p>
+        <button class="view-btn" onclick="openCollection('monograms')">View Collection</button>
+      </div>
+    </div>
+
+    <!-- Baby Casting -->
+    <div class="gallery-card">
+      <img src="assets/BabyPrints.jpg" alt="Baby Casting">
+      <div class="gallery-card-content">
+        <h3>Baby Casting</h3>
+        <p>Capturing the innocence of childhood through custom-made baby castings.</p>
+        <button class="view-btn" onclick="openCollection('baby')">View Collection</button>
+      </div>
+    </div>
+
+    <!-- Invitations -->
+    <div class="gallery-card">
+      <img src="assets/wedding_invit.jpg" alt="Wedding Invitations">
+      <div class="gallery-card-content">
+        <h3>Wedding Invitations</h3>
+        <p>Beautifully designed invitations that set the tone for your big day.</p>
+        <button class="view-btn" onclick="openCollection('invites')">View Collection</button>
+      </div>
+    </div>
+  </div>
+  </div>
+
+    <!-- Why Choose Us -->
+  <div class="why-choose-us">
+    <h2>Why Choose Us</h2>
+    <div class="choose-us-grid">
+      <div class="choose-card">
+        <h3>Premium Quality</h3>
+        <p>Every design is crafted with precision, using the finest materials.</p>
+      </div>
+      <div class="choose-card">
+        <h3>Timely Delivery</h3>
+        <p>We value your time and ensure all projects are delivered as promised.</p>
+      </div>
+      <div class="choose-card">
+        <h3>Personalized Designs</h3>
+        <p>Each creation reflects your unique story, style, and preferences.</p>
+      </div>
+      <div class="choose-card">
+        <h3>Dedicated Support</h3>
+        <p>Our team is always available to provide guidance and address your needs.</p>
+      </div>
+    </div>
+  </div>
+
+  </section>
+
+  <!-- FRAMES COLLECTION -->
+<section id="frames" class="collection-section">
+  <h2>Custom Frames</h2>
+  <div class="collection-grid">
+    <div class="collection-card"><img src="assets/frame1.jpg" alt="Frame 1"></div>
+    <div class="collection-card"><img src="assets/frame2.jpg" alt="Frame 2"></div>
+    <div class="collection-card"><img src="assets/frame3.jpg" alt="Frame 3"></div>
+    <div class="collection-card"><img src="assets/frame4.jpg" alt="Frame 2"></div>
+    <div class="collection-card"><img src="assets/frame5.jpg" alt="Frame 3"></div>
+
+  </div>
+   <button class="back-btn" onclick="goBackToProjects()">← Back to MANVE.studios</button>
+</section>
+
+<!-- MONOGRAMS COLLECTION -->
+<section id="monograms" class="collection-section">
+  <h2>Wedding Monograms</h2>
+  <div class="collection-grid">
+    <div class="collection-card"><img src="assets/wedding_logo.jpg" alt="Monogram 1"></div>
+    <div class="collection-card"><img src="assets/monogram2.jpg" alt="Monogram 2"></div>
+    <div class="collection-card"><img src="assets/monogram3.jpg" alt="Monogram 3"></div>
+  </div>
+   <button class="back-btn" onclick="goBackToProjects()">← Back to MANVE.studios</button>
+</section>
+
+<!-- BABY CASTING COLLECTION -->
+<section id="baby" class="collection-section">
+  <h2>Baby Casting</h2>
+  <div class="collection-grid">
+    <div class="collection-card"><img src="assets/BabyPrints.jpg" alt="Baby Casting 1"></div>
+    <div class="collection-card"><img src="assets/baby2.jpg" alt="Baby Casting 2"></div>
+    <div class="collection-card"><img src="assets/baby3.jpg" alt="Baby Casting 3"></div>
+  </div>
+   <button class="back-btn" onclick="goBackToProjects()">← Back to MANVE.studios</button>
+</section>
+
+<!-- INVITATIONS COLLECTION -->
+<section id="invites" class="collection-section">
+  <h2>Wedding Invitations</h2>
+  <div class="collection-grid">
+    <div class="collection-card"><img src="assets/wedding_invit.jpg" alt="Invitation "></div>
+    <div class="collection-card"><img src="assets/wedding_invit1.jpg" alt="Invitation "></div>
+    <div class="collection-card"><img src="assets/wedding_invit2.jpg" alt="Invitation "></div>
+    <div class="collection-card"><img src="assets/wedding_poster1.jpg" alt="Wedding Poster"></div>
+    <div class="collection-card"><img src="assets/wedding_poster2.jpg" alt="Poster "></div>
+    
+  </div>
+  <button class="back-btn" onclick="goBackToProjects()">← Back to MANVE.studios</button>
+</section>
+
+ 
+
+    <!-- GALLERY SECTION -->
+    <section id="gallery" class="page-section">
+      <h2>Canvas of Emotions</h2>
+      <p class="gallery-intro">Through my lens, emotions transform into timeless frames — explore curated collections of love, life, and colors.</p>
+
+      <div class="gallery-cards">
+        <div class="gallery-card">
+          <img src="assets/art5.jpg" alt="Crafted Dreams">
+          <div class="gallery-card-content">
+            <h3>Crafted Dreams</h3>
+            <p>Celebrating creativity and imagination, each frame brings artistic visions and moments to life.</p>
+            <button class="view-btn" onclick="openCollection('art')">View Collection</button>
+          </div>
+        </div>
+        <div class="gallery-card">
+          <img src="assets/nature5.jpg" alt="Nature’s Palette">
+          <div class="gallery-card-content">
+            <h3>Nature’s Palette</h3>
+            <p>Revealing the elegance, rhythm, and timeless charm of nature through every shot.</p>
+            <button class="view-btn" onclick="openCollection('nature')">View Collection</button>
+          </div>
+        </div>
+        <div class="gallery-card">
+          <img src="assets/nritya2.jpg" alt="Nritya Tarang">
+          <div class="gallery-card-content">
+            <h3>Nritya Tarang</h3>
+            <p>Capturing the grace, rhythm, and timeless beauty of classical dance in every frame.</p>
+            <button class="view-btn" onclick="openCollection('nritya')">View Collection</button>
+          </div>
+        </div>
+        <div class="gallery-card">
+          <img src="assets/humanity3.jpg" alt="Portraits of Humanity">
+          <div class="gallery-card-content">
+            <h3>Portraits of Humanity</h3>
+            <p>Through every frame, the soul of humanity comes alive.</p>
+            <button class="view-btn" onclick="openCollection('humanity')">View Collection</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOVE STORIES COLLECTION -->
+    <section id="art" class="collection-section">
+      <h2>Crafted Dreams</h2>
+      <div class="collection-grid">
+        <div class="collection-card"><img src="assets/art1.jpg" alt="art "></div>
+        <div class="collection-card"><img src="assets/art2.jpg" alt="art "></div>
+        <div class="collection-card"><img src="assets/art3.jpg" alt="art "></div>
+        <div class="collection-card"><img src="assets/art5.jpg" alt="art "></div>
+      </div>
+      <button class="back-btn" onclick="goBack()">← Back to Gallery</button>
+    </section>
+
+    <!-- STREET COLLECTION -->
+    <section id="nature" class="collection-section">
+      <h2>Nature’s Palette</h2>
+      <div class="collection-grid">
+        <div class="collection-card"><img src="assets/nature2.jpg" alt="nature "></div>
+        <div class="collection-card"><img src="assets/nature3.jpg" alt="nature "></div>
+        <div class="collection-card"><img src="assets/nature4.jpg" alt="nature "></div>
+        <div class="collection-card"><img src="assets/nature5.jpg" alt="nature "></div>
+        <div class="collection-card"><img src="assets/nature6.jpg" alt="nature "></div>
+        <div class="collection-card"><img src="assets/nature7.jpg" alt="nature "></div>
+        <div class="collection-card"><img src="assets/nature8.jpg" alt="nature "></div>
+        <div class="collection-card"><img src="assets/nature9.jpg" alt="nature "></div>
+        <div class="collection-card"><img src="assets/nature10.jpg" alt="nature "></div>
+        
+      </div>
+      <button class="back-btn" onclick="goBack()">← Back to Gallery</button>
+    </section>
+
+    <!-- COLORS OF INDIA COLLECTION -->
+    <section id="nritya" class="collection-section">
+      <h2>Nritya Tarang</h2>
+      <div class="collection-grid">
+        <div class="collection-card"><img src="assets/nritya1.jpg" alt="Nritya"></div>
+        <div class="collection-card"><img src="assets/nritya3.jpg" alt="Nritya"></div>
+        <div class="collection-card"><img src="assets/nritya2.jpg" alt="Nritya"></div>
+      </div>
+      <button class="back-btn" onclick="goBack()">← Back to Gallery</button>
+    </section>
+
+    <!-- HUMANITY COLLECTION -->
+    <section id="humanity" class="collection-section">
+      <h2>Portraits of Humanity</h2>
+      <div class="collection-grid">
+        <div class="collection-card"><img src="assets/humanity1.jpg" alt="Humanity "></div>
+        <div class="collection-card"><img src="assets/humanity2.jpg" alt="Humanity "></div>
+        <div class="collection-card"><img src="assets/humanity3.jpg" alt="Humanity "></div>
+         <div class="collection-card"><img src="assets/humanity4.jpg" alt="Humanity "></div>
+        <div class="collection-card"><img src="assets/humanity5.jpg" alt="Humanity "></div>
+        <div class="collection-card"><img src="assets/humanity6.jpg" alt="Humanity "></div>
+         <div class="collection-card"><img src="assets/humanity7.jpg" alt="Humanity "></div>
+        <div class="collection-card"><img src="assets/humanity8.jpg" alt="Humanity "></div>
+        <div class="collection-card"><img src="assets/humanity9.jpg" alt="Humanity "></div>
+         <div class="collection-card"><img src="assets/humanity10.jpg" alt="Humanity "></div>
+      </div>
+      <button class="back-btn" onclick="goBack()">← Back to Gallery</button>
+    </section>
+
+
+<section id="contact" class="page-section contact-section">
+  <h2 class="section-title">Let’s Create Together</h2>
+  <p class="section-subtitle">
+    Every frame tells a story. Whether it’s collaborations, projects, or heartfelt memories, I’d love to hear from you.
+  </p>
+
+  <div class="contact-container">
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <h3 class="highlight-name">Get in Touch</h3>
+      <p><i class="fab fa-instagram"></i> 
+        <a href="https://instagram.com/manve.studios" target="_blank">@manve.studios</a>
+      </p>
+      <p><i class="fas fa-phone"></i> 
+        <a href="tel:+919989657575">+91 99896 57575</a>
+      </p>
+      <p><i class="fas fa-envelope"></i> 
+        <a href="mailto:manvestudios@gmail.com">manvestudios@gmail.com</a>
+      </p>
+    </div>
+</section>
+
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p><footer>
+  <p>&copy; 2025 <span>Patel Venkat</span>. Crafted with passion. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
