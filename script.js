@@ -2,12 +2,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll(".navbar a");
   const mainSections = document.querySelectorAll(".page-section");
   const collections = document.querySelectorAll(".collection-section");
+  const exploreBtns = document.querySelectorAll(".btn-explore");
+  const menuToggle = document.querySelector('.menu-toggle');
+  const mobileNav = document.querySelector('.navbar');
 
   // Show About by default
   mainSections.forEach(s => s.classList.remove("active"));
-  document.getElementById("about").classList.add("active");
+  document.getElementById("about")?.classList.add("active");
 
-  // Navbar click
+  // NAVBAR CLICK
   navLinks.forEach(link => {
     link.addEventListener("click", e => {
       e.preventDefault();
@@ -15,108 +18,88 @@ document.addEventListener("DOMContentLoaded", () => {
 
       mainSections.forEach(s => s.classList.remove("active"));
       collections.forEach(c => c.classList.remove("active"));
-
       document.getElementById(targetId)?.classList.add("active");
 
       navLinks.forEach(l => l.classList.remove("active"));
       link.classList.add("active");
 
       window.scrollTo({ top: 0, behavior: "smooth" });
+
+      if (window.innerWidth <= 768) {
+        mobileNav.classList.remove("active"); // close mobile menu
+      }
     });
   });
 
-  // Explore buttons
-  document.querySelectorAll(".btn-explore").forEach(btn => {
+  // EXPLORE BUTTONS
+  exploreBtns.forEach(btn => {
     btn.addEventListener("click", e => {
       e.preventDefault();
       const targetId = btn.getAttribute("data-page");
 
       mainSections.forEach(s => s.classList.remove("active"));
       collections.forEach(c => c.classList.remove("active"));
-
       document.getElementById(targetId)?.classList.add("active");
+
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
   });
-});
 
-// Unified openCollection for gallery & projects
-function openCollection(id) {
-  // Hide all main sections and other collections
-  document.querySelectorAll(".page-section").forEach(s => s.classList.remove("active"));
-  document.querySelectorAll(".collection-section").forEach(c => c.classList.remove("active"));
+  // COLLECTIONS
+  function openCollection(id) {
+    mainSections.forEach(s => s.classList.remove("active"));
+    collections.forEach(c => c.classList.remove("active"));
 
-  const section = document.getElementById(id);
-  if (section) {
-    section.classList.add("active");
-    section.style.display = "flex"; // ensures overlay style works
+    const section = document.getElementById(id);
+    if (section) {
+      section.classList.add("active");
+      section.style.display = "flex";
+    }
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
-  window.scrollTo({ top: 0, behavior: "smooth" });
-}
+  window.openCollection = openCollection;
 
-// Unified goBack for gallery & projects
-function goBack() {
-  document.querySelectorAll(".collection-section").forEach(c => {
-    c.classList.remove("active");
-    c.style.display = "none";
-  });
+  function goBack() {
+    collections.forEach(c => {
+      c.classList.remove("active");
+      c.style.display = "none";
+    });
 
-  // Optionally, go back to gallery section if needed
-  const gallery = document.getElementById("gallery");
-  if (gallery) gallery.classList.add("active");
+    const gallery = document.getElementById("gallery");
+    if (gallery) gallery.classList.add("active");
 
-  window.scrollTo({ top: 0, behavior: "smooth" });
-}
-
-// Optional: close modal on clicking outside content
-document.querySelectorAll('.collection-section').forEach(modal => {
-  modal.addEventListener('click', e => {
-    if (e.target === modal) goBack();
-  });
-});
-function goBackToProjects() {
-  // Hide all project collections
-  document.querySelectorAll('.collection-section').forEach(col => {
-    col.classList.remove('active');
-    col.style.display = "none";
-  });
-
-  // Show projects section
-  const projects = document.getElementById('projects');
-  if (projects) {
-    projects.classList.add('active');
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-document.addEventListener("DOMContentLoaded", () => {
-  const menuToggle = document.querySelector('.menu-toggle');
-  const mobileNav = document.querySelector('.sidebar'); // sidebar as mobile menu
+  window.goBack = goBack;
 
+  function goBackToProjects() {
+    collections.forEach(c => {
+      c.classList.remove("active");
+      c.style.display = "none";
+    });
+
+    const projects = document.getElementById("projects");
+    if (projects) projects.classList.add("active");
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  window.goBackToProjects = goBackToProjects;
+
+  // Close modal on clicking outside content
+  collections.forEach(modal => {
+    modal.addEventListener('click', e => {
+      if (e.target === modal) goBack();
+    });
+  });
+
+  // MOBILE MENU TOGGLE
   if (menuToggle && mobileNav) {
     menuToggle.addEventListener('click', () => {
-      mobileNav.classList.toggle('active'); // make sure CSS uses .active to show sidebar
+      mobileNav.classList.toggle('active');
     });
   }
-
-  // Close sidebar when a link is clicked
-  document.querySelectorAll(".sidebar a").forEach(link => {
-    link.addEventListener("click", () => {
-      if (window.innerWidth <= 768) {
-        mobileNav.classList.remove("active");
-      }
-    });
-  });
-});
-
-
-
-// Close menu when a link is clicked (mobile UX improvement)
-document.querySelectorAll(".navbar a").forEach(link => {
-  link.addEventListener("click", () => {
-    if (window.innerWidth <= 768) {
-      navbar.classList.remove("open");
-    }
-  });
 });
