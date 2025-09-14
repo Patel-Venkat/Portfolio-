@@ -90,14 +90,26 @@ function goBackToProjects() {
 
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-const menuToggle = document.querySelector(".menu-toggle");
-const sidebar = document.querySelector(".sidebar");
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const mobileNav = document.querySelector('.sidebar'); // sidebar as mobile menu
 
-if (menuToggle) {
-  menuToggle.addEventListener("click", () => {
-    sidebar.classList.toggle("active");
+  if (menuToggle && mobileNav) {
+    menuToggle.addEventListener('click', () => {
+      mobileNav.classList.toggle('active'); // make sure CSS uses .active to show sidebar
+    });
+  }
+
+  // Close sidebar when a link is clicked
+  document.querySelectorAll(".sidebar a").forEach(link => {
+    link.addEventListener("click", () => {
+      if (window.innerWidth <= 768) {
+        mobileNav.classList.remove("active");
+      }
+    });
   });
-}
+});
+
 
 
 // Close menu when a link is clicked (mobile UX improvement)

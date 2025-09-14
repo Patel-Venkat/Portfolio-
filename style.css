@@ -308,6 +308,11 @@ button:hover, .btn-explore:hover, .view-btn:hover, .back-btn:hover {
   transform: translateY(-6px);
   box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 
 /* View Button */
 .view-btn {
@@ -373,6 +378,10 @@ button:hover, .btn-explore:hover, .view-btn:hover, .back-btn:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
+.collection-grid, .gallery-cards, .projects-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
 .back-btn {
   display: block;           /* makes it a block element */
   margin: 30px auto 0;      /* top margin 30px, auto left/right for centering */
@@ -392,6 +401,10 @@ button:hover, .btn-explore:hover, .view-btn:hover, .back-btn:hover {
   background: #4b2e2e;
 }
 
+.btn-explore, .view-btn, .back-btn {
+  min-width: 44px;  /* recommended tap size */
+  min-height: 44px;
+}
 
 
 /* ---------- WHY CHOOSE US ---------- */
@@ -611,6 +624,160 @@ button:hover, .btn-explore:hover, .view-btn:hover, .back-btn:hover {
 
 
 /* ---------- RESPONSIVE ---------- */
+
+/* ---------- RESPONSIVE ---------- */
+
+/* Tablets & Small Laptops */
+@media (max-width: 1024px) {
+  .cards-grid, .choose-us-grid, .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .mobile-header {
+  display: none;
+}
+}
+
+/* Phones (Android, iPhone) */
+@media (max-width: 768px) {
+  /* Sidebar becomes top header */
+  .sidebar {
+    display: none; /* hide brown sidebar on mobile */
+  }
+  
+
+  .main {
+    margin-left: 0;
+    padding: 1rem;
+    width: 100%;
+  }
+
+
+  /* Mobile Nav */
+  .mobile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background: #f8eee0;
+  }
+
+  .mobile-profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+   .navbar {
+    position: fixed;
+    top: 0;
+    left: -260px;       /* hidden by default */
+    width: 260px;
+    height: 100%;
+    background: #2e2a27;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    transition: left 0.3s ease;
+    z-index: 9999;
+  }
+
+  .navbar.active {
+    left: 0;            /* slide in when active */
+  }
+
+  .navbar a {
+    color: #f9f4ef;
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    color: #4b2e2e;
+    background: none;
+    border: none;
+  }
+
+  .cards-grid, 
+  .choose-us-grid, 
+  .projects-grid { 
+    grid-template-columns: 1fr; 
+  }
+}
+
+/* Very small screens (≤ 500px) */
+@media (max-width: 500px) {
+  .about-content, 
+  .gallery-intro, 
+  .contact-info {
+    padding: 1rem;
+  }
+
+  .about-text p, 
+  .gallery-intro, 
+  .contact-info p {
+    font-size: 0.9rem;
+  }
+
+  .contact-info {
+    max-width: 100%;
+  }
+
+  .btn-explore, 
+  .view-btn, 
+  .back-btn {
+    font-size: 0.85rem;
+    padding: 0.6rem 1rem;
+  }
+}
+
+ 
+
+/* Tablets (iPad, Android Tabs) */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .sidebar {
+    width: 200px;
+    padding: 15px;
+  }
+
+  .main {
+    margin-left: 200px;
+    padding: 15px;
+  }
+
+  .about-content, 
+  .gallery-cards, 
+  .collection-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .mobile-header {
+  display: none;
+}
+}
+
+/* Desktops (large screens) */
+@media (min-width: 1201px) {
+  .about-content, 
+  .gallery-cards, 
+  .collection-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .sidebar {
+    width: 300px;
+  }
+
+  .main {
+    margin-left: 300px;
+  }
+  .mobile-header {
+  display: none;
+}
+}
+
 @media (max-width: 1024px) {
   .cards-grid, .choose-us-grid, .projects-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -633,175 +800,95 @@ button:hover, .btn-explore:hover, .view-btn:hover, .back-btn:hover {
   .menu-toggle { display: block; }
 }
 
-/* ---------- RESPONSIVENESS ---------- */
-  /* Hide mobile header by default (desktop view) */
-.mobile-header {
-  display: none;
-}
-
-/* Tablets (≤1024px) */
-@media (max-width: 1024px) {
-  .layout {
-    grid-template-columns: 220px 1fr; /* shrink sidebar */
+@media (max-width: 768px) {
+  /* Sidebar becomes top header */
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
   }
 
   .sidebar img {
-    width: 120px;
-    height: 120px;
+    width: 60px;
+    height: 60px;
+    margin: 0;
   }
 
-  .navbar a {
-    font-size: 0.95rem;
-    padding: 10px;
+  .sidebar h2, .sidebar p, .sidebar .contact-links {
+    display: none; /* hide text on small screens, keep it minimal */
   }
 
-  .gallery-cards,
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Mobiles (≤768px) */
-@media (max-width: 768px) {
-  .layout {
-    grid-template-columns: 1fr;
+  .main {
+    margin-left: 0; /* no sidebar offset */
   }
 
-/* Show mobile header only on screens <= 768px */
-@media (max-width: 768px) {
-  .mobile-header {
-    display: flex; /* or block depending on your layout */
-    align-items: center;
-    justify-content: space-between;
-    background: #4b3621; /* example background */
-    padding: 10px 15px;
-  }
-
-  .mobile-header .mobile-profile {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-  }
-
-  .mobile-header .menu-toggle {
-    font-size: 24px;
-    cursor: pointer;
-    background: none;
-    border: none;
-    color: #fff;
-  }
-
-  .mobile-header .mobile-name {
-    color: #fff;
-    font-weight: 500;
-    font-size: 16px;
-  }
-}
-
- 
- /* Mobile nav hidden by default */
-.mobile-nav {
-  display: none;
-  flex-direction: column;
-  background: #4b3621;
-  position: absolute;
-  top: 60px; /* below header */
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-}
-
-.mobile-nav a {
-  color: #fff;
-  padding: 10px 15px;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(255,255,255,0.2);
-}
-
-/* Show nav when active */
-.mobile-nav.active {
-  display: flex;
-}
-
-/* Mobile header layout */
-@media (max-width: 768px) {
+  /* Mobile header/nav */
   .mobile-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #4b3621;
-    padding: 10px 15px;
-    position: relative;
+    padding: 10px;
+    background: #f8eee0;
   }
-  
+
+  .navbar {
+    display: none; /* hidden by default */
+    flex-direction: column;
+    background: #f8eee0;
+    padding: 10px;
+  }
+
+  .navbar.active {
+    display: flex; /* toggle via JS */
+  }
+
   .menu-toggle {
     font-size: 24px;
-    cursor: pointer;
     background: none;
     border: none;
-    color: #fff;
-  }
-
-  .mobile-profile {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-  }
-
-  .mobile-name {
-    color: #fff;
-    font-weight: 500;
-    font-size: 16px;
-  }
-
-  /* Hide desktop header on mobile */
-  .header {
-    display: none;
+    color:  #4b2e2e;
+    cursor: pointer;
   }
 }
+
+@media (min-width: 769px) and (max-width: 1200px) {
   .sidebar {
-    position: fixed;
-    width: 100%;
-    height: 60px;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0 1rem;
-    top: 0;
-    left: 0;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    width: 200px;
+    padding: 15px;
   }
+
   .main {
-    margin-top: 80px; /* push content below fixed header */
+    margin-left: 200px;
+    padding: 15px;
   }
 
-  /* Gallery/Projects → single column */
-  .gallery-cards,
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .collection-grid {
-    grid-template-columns: 1fr;
+  .about-content, .gallery-cards, .collection-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
-
-/* Small phones (≤480px) */
-@media (max-width: 480px) {
-  .sidebar img {
-    width: 50px;
-    height: 50px;
+@media (min-width: 1201px) {
+  .about-content, .gallery-cards, .collection-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 
-  .btn-explore, .view-btn {
-    font-size: 0.9rem;
-    padding: 8px 14px;
+  .sidebar {
+    width: 300px;
   }
 
-  h2 {
-    font-size: 1.5rem;
+  .main {
+    margin-left: 300px;
   }
 }
-/* Hide menu toggle on larger screens */
-.menu-toggle {
-  display: none;
-} 
+@media (orientation: landscape) and (max-width: 768px) {
+  .mobile-header {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .mobile-contact-links {
+    flex-direction: row;
+    gap: 15px;
+  }
+}
