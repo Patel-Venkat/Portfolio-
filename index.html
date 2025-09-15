@@ -49,7 +49,6 @@
     <header class="header">
       <nav class="navbar">
         <a href="#" data-page="about" class="active">About</a>
-        <a href="#" data-page="resume">Resume</a>
         <a href="#" data-page="projects">MANVE.studios</a>
         <a href="#" data-page="gallery">Gallery</a>
         <a href="#" data-page="contact">Contact</a>
@@ -62,21 +61,18 @@
         <p class="tagline">Photographer • Designer • Visual Storyteller</p>
 
         <div class="about-text">
-        <p> I’m <strong>Patel Venkat</strong>, a creator deeply passionate about editing, photography, and design. What started as a love for creativity slowly shaped into my own venture — <strong>Manve.studios</strong>, with the vision “Design Your Names.”</p>
-
-<p>Through this brand, I’ve explored a wide spectrum of artistic expressions: wall paintings, mandala art, digital portraits, caricatures, sculptures, custom invitations, video editing, photography, and personalized frames. Every project I take on is more than just design — it’s about creating something meaningful, unique, and memorable.</p>
-
-<p>For me, creativity isn’t just a skill, it’s a language — a way to tell stories, capture emotions, and design timeless identities. With every stroke, frame, and idea, I aim to inspire and leave behind a touch of artistry that reflects individuality.</p>
-
-<p>As I continue to grow, my mission is to make Manve.studios not just a brand, but a name remembered for creativity, meaning, and lasting impact.</p>
+        <div class="about-text">
+          <p>I capture emotions and moments, turning them into timeless stories through my lens. For me, photography isn’t just about pictures — it’s about preserving feelings.</p>
+          <p>Through <strong>Manve Studios</strong>, I’ve had the privilege of working on wedding monograms, custom frames, baby castings, and invitations — each crafted with passion and precision.</p>
+          <p>Every project I take on is more than a job — it’s a way to connect, create, and inspire.</p>
         </div>
+
 
         <!-- Highlights -->
         <div class="about-highlights">
           <div class="highlight"><i class="fas fa-camera"></i> 7+ Years Experience</div>
-          <div class="highlight"><i class="fas fa-paint-brush"></i> 200+ Projects Completed</div>
-          <div class="highlight"><i class="fas fa-users"></i> 50+ Clients Worldwide</div>
-          <div class="highlight"><i class="fas fa-award"></i> 3 Photography Exhibitions</div>
+          <div class="highlight"><i class="fas fa-paint-brush"></i> 100+ Projects Completed</div>
+          <div class="highlight"><i class="fas fa-users"></i> 50+ Clients</div>s
         </div>
 
         <!-- Signature -->
@@ -87,61 +83,7 @@
       </div>
     </section>
 
-<!-- RESUME SECTION -->
-<section id="resume" class="page-section">
-  <h2 class="section-title">Resume</h2>
-  
-  <!-- Intro Card -->
-   
-    <p>
-      A creative professional with a strong foundation in Computer Science, skilled in 
-      <b>editing, photography, and design</b>, with hands-on experience in 
-      <b>client communication and research</b>. Passionate about blending 
-      <b>creativity with technology</b> to deliver impactful solutions.
-    </p>
-  
-
-  <!-- Education -->
-  <div class="resume-section">
-    <h3>Education</h3>
-    <div class="timeline">
-      <div class="timeline-item">
-        <span class="timeline-dot"></span>
-        <div class="timeline-date">2021 – 2024</div>
-        <div class="timeline-content">
-          <h4>ISBM University</h4>
-          <p>B.Sc in Computer Science</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Experience -->
-  <div class="resume-section">
-    <h3>Experience</h3>
-    <div class="timeline">
-      <div class="timeline-item">
-        <span class="timeline-dot"></span>
-        <div class="timeline-date">2024 – 2025</div>
-        <div class="timeline-content">
-          <h4>Research Associate</h4>
-          <p>Tech Mahindra — Worked on research initiatives, gained skills in teamwork and discipline.</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <span class="timeline-dot"></span>
-        <div class="timeline-date">2023 – 2024</div>
-        <div class="timeline-content">
-          <h4>Customer Care Representative</h4>
-          <p>QCConnect Business Solutions — Strengthened communication and client-handling abilities.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-   
-  
-</section>
+ 
 
 
     <!-- PROJECTS SECTION -->
@@ -170,7 +112,7 @@
   <div class="gallery-cards">
     <!-- Custom Frames -->
     <div class="gallery-card">
-      <img src="assets/frame1.jpg" alt="Custom Frames">
+      <img src="assets/frame4.jpg" alt="Custom Frames">
       <div class="gallery-card-content">
         <h3>Custom Frames</h3>
         <p>Handcrafted frames to preserve your cherished memories in timeless style.</p>
@@ -178,35 +120,37 @@
       </div>
     </div>
 
+    <!-- Invitations -->
+    <div class="gallery-card">
+      <img src="assets/wedding_invit.jpg" alt="Invitations">
+      <div class="gallery-card-content">
+        <h3>Digital Invitations</h3>
+        <p>Beautifully designed invitations that set the tone for your big day.</p>
+        <button class="view-btn" onclick="openCollection('invites')">View Collection</button>
+      </div>
+    </div>
+
     <!-- Wedding Monograms -->
     <div class="gallery-card">
-      <img src="assets/wedding_logo.jpg" alt="Wedding Monograms">
+      <img src="assets/wedding_logo.jpg" alt="Custom Edits">
       <div class="gallery-card-content">
-        <h3>Wedding Monograms</h3>
+        <h3>Custom Edits</h3>
         <p>Elegant and personalized monograms, crafted to make weddings unforgettable.</p>
-        <button class="view-btn" onclick="openCollection('monograms')">View Collection</button>
+        <button class="view-btn" onclick="openCollection('customedits')">View Collection</button>
       </div>
     </div>
 
     <!-- Baby Casting -->
     <div class="gallery-card">
-      <img src="assets/BabyPrints.jpg" alt="Baby Casting">
+      <img src="assets/BabyPrints.jpg" alt="Others">
       <div class="gallery-card-content">
-        <h3>Baby Casting</h3>
+        <h3>Others</h3>
         <p>Capturing the innocence of childhood through custom-made baby castings.</p>
-        <button class="view-btn" onclick="openCollection('baby')">View Collection</button>
+        <button class="view-btn" onclick="openCollection('others')">View Collection</button>
       </div>
     </div>
 
-    <!-- Invitations -->
-    <div class="gallery-card">
-      <img src="assets/wedding_invit.jpg" alt="Wedding Invitations">
-      <div class="gallery-card-content">
-        <h3>Wedding Invitations</h3>
-        <p>Beautifully designed invitations that set the tone for your big day.</p>
-        <button class="view-btn" onclick="openCollection('invites')">View Collection</button>
-      </div>
-    </div>
+     
   </div>
   </div>
 
@@ -249,31 +193,9 @@
    <button class="back-btn" onclick="goBackToProjects()">← Back to MANVE.studios</button>
 </section>
 
-<!-- MONOGRAMS COLLECTION -->
-<section id="monograms" class="collection-section">
-  <h2>Wedding Monograms</h2>
-  <div class="collection-grid">
-    <div class="collection-card"><img src="assets/wedding_logo.jpg" alt="Monogram 1"></div>
-    <div class="collection-card"><img src="assets/monogram2.jpg" alt="Monogram 2"></div>
-    <div class="collection-card"><img src="assets/monogram3.jpg" alt="Monogram 3"></div>
-  </div>
-   <button class="back-btn" onclick="goBackToProjects()">← Back to MANVE.studios</button>
-</section>
-
-<!-- BABY CASTING COLLECTION -->
-<section id="baby" class="collection-section">
-  <h2>Baby Casting</h2>
-  <div class="collection-grid">
-    <div class="collection-card"><img src="assets/BabyPrints.jpg" alt="Baby Casting 1"></div>
-    <div class="collection-card"><img src="assets/baby2.jpg" alt="Baby Casting 2"></div>
-    <div class="collection-card"><img src="assets/baby3.jpg" alt="Baby Casting 3"></div>
-  </div>
-   <button class="back-btn" onclick="goBackToProjects()">← Back to MANVE.studios</button>
-</section>
-
 <!-- INVITATIONS COLLECTION -->
 <section id="invites" class="collection-section">
-  <h2>Wedding Invitations</h2>
+  <h2>Digital Invitations</h2>
   <div class="collection-grid">
     <div class="collection-card"><img src="assets/wedding_invit.jpg" alt="Invitation "></div>
     <div class="collection-card"><img src="assets/wedding_invit1.jpg" alt="Invitation "></div>
@@ -285,6 +207,30 @@
   <button class="back-btn" onclick="goBackToProjects()">← Back to MANVE.studios</button>
 </section>
 
+
+<!-- MONOGRAMS COLLECTION -->
+<section id="customedits" class="collection-section">
+  <h2>Custom Edits</h2>
+  <div class="collection-grid">
+    <div class="collection-card"><img src="assets/wedding_logo.jpg" alt="Monogram 1"></div>
+    <div class="collection-card"><img src="assets/monogram2.jpg" alt="Monogram 2"></div>
+    <div class="collection-card"><img src="assets/monogram3.jpg" alt="Monogram 3"></div>
+  </div>
+   <button class="back-btn" onclick="goBackToProjects()">← Back to MANVE.studios</button>
+</section>
+
+<!-- BABY CASTING COLLECTION -->
+<section id="others" class="collection-section">
+  <h2>Others</h2>
+  <div class="collection-grid">
+    <div class="collection-card"><img src="assets/BabyPrints.jpg" alt="Baby Casting 1"></div>
+    <div class="collection-card"><img src="assets/baby2.jpg" alt="Baby Casting 2"></div>
+    <div class="collection-card"><img src="assets/baby3.jpg" alt="Baby Casting 3"></div>
+  </div>
+   <button class="back-btn" onclick="goBackToProjects()">← Back to MANVE.studios</button>
+</section>
+
+ 
  
 
     <!-- GALLERY SECTION -->
