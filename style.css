@@ -530,6 +530,7 @@ img {
 }
 
 .contact-info p {
+  text-align: center;
   font-size: 1rem;
   margin: 0.7rem 0;
   color: #5a3f36;
@@ -538,13 +539,15 @@ img {
 }
 
 .contact-info i {
+  text-align: center;
   margin-right: 10px;
-  color: #d96c4a; /* accent color for icons */
+  color: #4b2e2e; /* accent color for icons */
   font-size: 1.2rem;
   transition: color 0.3s ease;
 }
 
 .contact-info a {
+  text-align: center;
   color: #4b2e2e;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -552,7 +555,7 @@ img {
 
 .contact-info a:hover,
 .contact-info i:hover {
-  color: #d96c4a; /* accent on hover */
+  color: #ab6e3f; /* accent on hover */
 }
 
 /* Responsive */
