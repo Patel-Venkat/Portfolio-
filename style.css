@@ -639,6 +639,11 @@ img {
     padding: 10px 15px;
     background: #f8eee0;
   }
+   .mobile-name {
+        margin-left: auto;
+        text-align: right;
+           margin-right: 12px;
+    }
 
   .mobile-profile {
   width: 40px;
